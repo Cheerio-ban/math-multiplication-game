@@ -1,3 +1,7 @@
+//An algorithm used to shuffle an array. 
+// The comma operator in the variable?
+// you can read on it: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator
+
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
   
