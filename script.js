@@ -38,7 +38,7 @@ let timePlayed = 0;
 let baseTime = 0;
 let penaltyTime = 0;
 let finalTime = 0;
-let finalTimeDisplay = '0.0s';
+let finalTimeDisplay = '0.0';
 
 // Scroll
 let valueY = 0;
@@ -137,7 +137,7 @@ function checkTime() {
         // Correct Guess, No Penalty 
       } else {
         // Incorrect Guess, No Penalty
-        penaltyTime += 0.5; 
+        penaltyTime += 3; 
       }
     });
     finalTime = timePlayed + penaltyTime;
@@ -263,13 +263,13 @@ function countdownStart() {
   countdown.textContent = '3';
   setTimeout(() => {
     countdown.textContent = '2';
-  }, 1000);
+  }, 400);
   setTimeout(() => {
     countdown.textContent = '1';
-  }, 2000);
+  }, 1100);
   setTimeout(() => {
     countdown.textContent = 'GO!';
-  }, 3000);
+  }, 1600);
 }
 
 // Navigate from splash page to Countdown page
@@ -278,7 +278,7 @@ function showCountdown() {
   splashPage.hidden = true;
   countdownStart();
   populateGamePage();
-  setTimeout(showGamePage, 3200)
+  setTimeout(showGamePage, 2400)
 }
 
 //Get the value from selected value button
